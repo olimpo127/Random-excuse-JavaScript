@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excuses project</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <strong><p>OMG! You will not believe me but...</p></strong>
+    <p id="excuse"></p>
+    <script type = "text/javascript">
+        function sentence(responsible, mess, item, when) {
+            
+            var responsibles = ["My dog Lía", "My daugther Nini", "The old Fifi", "My beloved Javi", "Mike the cat", "Uncle Churro", "Uncle Joaquin", "Angry Cami", "Rafa", "Lía again"];
+            
+            var messes = ["ate", "bit", "burnt", "cut down", "chopped", "completely destroyed", "broke", "teared apart", "tossed away", "ripped apart" ];
+            
+            var items = ["my homework", "my PS5", "my football", "my TV", "my favorite book", "the window", "the kitchen", "the fridge", "the newspaper", "my project"];
+            
+            var whens = ["yesterday", "today", "2 days ago", "last week", "3 years ago", "last monday", "on my birthday", "on christmas", "3 months ago", "on August 8th"];
+            
+            var responsible = responsibles[Math.floor(Math.random() * responsibles.length)];
+    
+            var mess = messes[Math.floor(Math.random() * messes.length)];
+    
+            var item = items[Math.floor(Math.random() * items.length)];
+    
+            var when = whens[Math.floor(Math.random() * whens.length)];
+            
+            var parrafo = document.querySelector("#excuse")
+            parrafo.innerHTML = responsible + " " + mess + " " + item + " " + when 
+        }
+    </script>
+    <strong><p><a href="#" onClick="sentence()">Click Me</a></p></strong>
+</body>
+</html>
